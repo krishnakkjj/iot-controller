@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>loginpage.com</title>
+<style type="text/css">
+
+
+.contain {
+	display: flex;
+	justify-content: center;
+	margin-top: 25px;
+}
+#capt {
+	width: 170px;
+	height: 50px;
+	font-size: 37px;
+	background-color: #2C31CF;
+	padding: 0px;
+	border: none;
+	letter-spacing: 1px;
+	float: left;
+	color: #E9E91D;
+	border-radius: 5px 0 0 5px;
+}
+#refresh {
+	float: left;
+	background-color: #2C31CF;
+	height: 50px;
+	border-radius: 0 5px 5px 0;
+}
+#refresh img {
+	margin-top: 0px;
+	margin-right: 5px;
+	cursor: pointer;
+}
+#textinput {
+	width: 170px;
+	height: 50px;
+	font-size: 37px;
+	background-color: #252521;
+	border: none;
+	margin-left: 10px;
+	border-radius: 5px;
+	padding: 5px;
+	color: #D58A1E;
+}
+.contain button {
+	padding: 2px 20px;
+	height: 50px;
+	cursor: pointer;
+	border: none;
+	border-radius: 5px;
+	margin-left: 10px;
+	margin-top: 0px;
+	background-color: #764D11;
+	color: #CED4F0;
+	transition: .5s;
+}
+.contain button:hover {
+	background-color: #976216;
+}
+#su:hover {
+	background-color:green;
+	color:white;
+	border-radius: 5px 5px 5px 5px;
+}
+#su1:hover {
+	background-color: red;
+	color:white;
+	border-radius: 5px 5px 5px 5px;
+}
+#area1{
+	width: 800px;
+	height: 500px;
+	background-image:url("images/kk2.png");
+	border: none;
+	margin:0;
+	padding: 0;
+          	float:center;
+	color:white;
+	margin-top:100px;
+	border-radius: 20px 20px 20px 20px;
+	
+	
+}
+body{
+background-image:url("images/kk.png")
+}
+
+</style>  
+  </head>
+ <body><center>
+<div id=area1>
+<h1><b><u>Krishna Computer</u></b></h1>
+<h2><b>Login</b><h2>
+<form action="About.html ">  
+    <label  style="color:orange;"> User Name </label>  
+    <input type="text" name="firstname" placeholder="Enter user name"><br>  
+    <label style="color:orange;"> Password</label>&nbsp&nbsp 
+    <input type="Password" name="password" placeholder=" Enter password"><br>  
+	<div class="contain">
+		<input type="text" id="capt" readonly="readonly" >
+		<div id="refresh"> <img src="images/refresh.png" width="50px" height="40px" onclick="cap()"></div>
+
+		<input type="text" id="textinput" placeholder="Enter..">
+		<button onclick="validcap()">Check</button>
+	</div><br>
+    <input type="submit" value="submit" onclick="ok()" id="su">&nbsp&nbsp&nbsp&nbsp&nbsp<input type="reset" value="Reset" onclick="ok1()" id="su1">  
+</form> 
+<marquee scrollamount="10"><p style="margin-top:50px;color:orange;">Design and Development By Krishna Kumar</p></marquee>
+</div></center>
+<script type="text/javascript">
+		function cap() {
+
+			var alpha=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V'
+			           ,'W','X','Y','Z','1','2','3','4','5','6','7','8','9','0','a','b','c','d','e','f','g','h','i',
+			           'j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+
+			var a=alpha[Math.floor(Math.random()*62)];
+			var b=alpha[Math.floor(Math.random()*62)];
+			var c=alpha[Math.floor(Math.random()*62)];
+			var d=alpha[Math.floor(Math.random()*62)];
+			var e=alpha[Math.floor(Math.random()*62)];
+			var f=alpha[Math.floor(Math.random()*62)];
+
+			var sum=a + b + c + d + e + f;
+
+			document.getElementById("capt").value=sum;
+		}
+
+		function validcap() {
+			var string1 = document.getElementById('capt').value;
+			var string2 = document.getElementById('textinput').value;
+			if (string1 == string2){
+				alert("Form is validated Succesfully");
+				return true;
+			}
+			else {
+				alert("Please enter a valid captcha");
+				return false;
+			}
+		}
+		function ok() {
+			confirm("are you ready for submit");
+			
+			}
+		function ok1() {
+			confirm("are you ready for reset");
+			}			
+
+
+
+	</script>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
